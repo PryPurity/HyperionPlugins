@@ -1,5 +1,5 @@
 name: HyperionPlugins
-main: HyperionMain.Main
+main: HyperionMain.MainClass
 description: nothing to see here.
 version: 1.0
 commands:
