@@ -6,4 +6,4 @@ commands:
     configbroadcast:
         usage:
         description:
-        aliases: configb, cb
+        aliases: configb
