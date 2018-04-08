@@ -1,9 +1,13 @@
 name: HyperionPlugins
 main: HyperionMain.MainClass
 description: nothing to see here.
-version: 1.0
+version: 1.1
 commands:
     configbroadcast:
         usage:
         description:
         aliases: configb
+    plugins:
+        usage:
+        description:
+        aliases: [plugin, ?, pl, plugins]

@@ -1,6 +1,7 @@
 package HyperionMain;
 
 import HyperionBC.*;
+import HyperionBlocker.Blockone;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginManager;
@@ -12,6 +13,7 @@ public class MainClass extends JavaPlugin {
         Bukkit.getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "HyperionKnight's Plugin is now active!");
         registerEvents();
         registerBC();
+        registerCommands();
     }
 
     public void onDisable(){
@@ -25,5 +27,12 @@ public class MainClass extends JavaPlugin {
         new Utils(this);
         getCommand("configbroadcast").setExecutor(new BroadcastConfigCommand());
         Utils.init();
+    }
+    private void registerCommands() {
+        registerBlocker();
+    }
+
+    private void registerBlocker() {
+        getCommand("plugins").setExecutor(new Blockone());
     }
 }
