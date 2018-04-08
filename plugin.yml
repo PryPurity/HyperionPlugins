@@ -1,0 +1,9 @@
+name: HyperionPlugins
+main: HyperionMain.Main
+description: nothing to see here.
+version: 1.0
+commands:
+    configbroadcast:
+        usage:
+        description:
+        aliases: configb
