@@ -2,6 +2,7 @@ package HyperionMain;
 
 import HyperionBC.*;
 import HyperionBlocker.Blockone;
+import HyperionReport.Report;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginManager;
@@ -14,9 +15,10 @@ public class MainClass extends JavaPlugin {
         registerEvents();
         registerBC();
         registerCommands();
+        registerReporter();
     }
 
-    public void onDisable(){
+    public void onDisable() {
     }
 
     private void registerEvents() {
@@ -28,11 +30,17 @@ public class MainClass extends JavaPlugin {
         getCommand("configbroadcast").setExecutor(new BroadcastConfigCommand());
         Utils.init();
     }
+
     private void registerCommands() {
         registerBlocker();
     }
 
     private void registerBlocker() {
         getCommand("plugins").setExecutor(new Blockone());
+
+    }
+    public void registerReporter() {
+        getCommand("report").setExecutor(new Report());
+
     }
 }

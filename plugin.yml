@@ -10,4 +10,4 @@ commands:
     plugins:
         usage:
         description:
-        aliases: [plugin, ?, pl, plugins]
+        aliases: [?, pl, plugins]
