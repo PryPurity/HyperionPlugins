@@ -11,9 +11,9 @@ public class RandomTP implements CommandExecutor {
         if(commandLabel.equalsIgnoreCase("randomtp") || commandLabel.equalsIgnoreCase("rtp")) {
             Player player = (Player) sender;
 
-            int randomX = (int) Math.random()*2000
-            int randomY = (int) Math.random()*256
-            int randomZ = (int) Math.random()*2000
+            int randomX = (int) (Math.random()*2000);
+            int randomY = (int) (Math.random()*256);
+            int randomZ = (int) (Math.random()*2000);
 
             Location rtp = new Location(player.getWorld(),randomX, randomY, randomZ );
             player.teleport(rtp);
