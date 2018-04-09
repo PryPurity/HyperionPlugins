@@ -13,7 +13,7 @@ public class Util {
         plugin = instance;
     }
 
-    private static File file = new File(Bukkit.getServer().getPluginManager().getPlugin("HyperionPlugins").getDataFolder() + "/Broadcaster/Config.yml");
+    private static File file = new File(Bukkit.getServer().getPluginManager().getPlugin("HyperionPlugins").getDataFolder() + "/Reports/Config.yml");
     private static YamlConfiguration myFile = YamlConfiguration.loadConfiguration(file);
 
 }

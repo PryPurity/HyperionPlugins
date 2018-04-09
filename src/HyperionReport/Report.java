@@ -8,7 +8,7 @@ public class Report implements CommandExecutor {
 
 
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         if (commandLabel.equalsIgnoreCase("report") || commandLabel.equalsIgnoreCase("rpt")) {
 
 

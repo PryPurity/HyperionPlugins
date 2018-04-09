@@ -3,6 +3,7 @@ package HyperionMain;
 import HyperionBC.*;
 import HyperionBlocker.Blockone;
 import HyperionReport.Report;
+import HyperionTP.RandomTP;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.PluginManager;
@@ -16,6 +17,7 @@ public class MainClass extends JavaPlugin {
         registerBC();
         registerCommands();
         registerReporter();
+        registerRTP();
     }
 
     public void onDisable() {
@@ -24,7 +26,6 @@ public class MainClass extends JavaPlugin {
     private void registerEvents() {
         PluginManager pm = getServer().getPluginManager();
     }
-
     private void registerBC() {
         new Utils(this);
         getCommand("configbroadcast").setExecutor(new BroadcastConfigCommand());
@@ -34,13 +35,15 @@ public class MainClass extends JavaPlugin {
     private void registerCommands() {
         registerBlocker();
     }
-
     private void registerBlocker() {
         getCommand("plugins").setExecutor(new Blockone());
 
     }
-    public void registerReporter() {
+    private void registerReporter() {
         getCommand("report").setExecutor(new Report());
 
+    }
+    private void registerRTP(){
+        getCommand("rtp").setExecutor(new RandomTP());
     }
 }

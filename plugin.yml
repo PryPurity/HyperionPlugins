@@ -11,3 +11,7 @@ commands:
         usage:
         description:
         aliases: [?, pl, plugins]
+    rtp:
+        usage:
+        description:
+        aliases: randomtp
