@@ -19,7 +19,7 @@ public class RandomTP implements CommandExecutor {
             Location rtp = new Location(player.getWorld(),randomX, randomY, randomZ );
             player.teleport(rtp);
             rtp.getBlock().setType(Material.DIRT);
-            player.sendMessage("You were teleported to X: " + randomX + " Y: " + randomY " Z: " + randomZ);
+            player.sendMessage("You were teleported to X: " + randomX + " Y: " + randomY + " Z: " + randomZ);
         }
         return false;
     }

@@ -2,7 +2,7 @@ package HyperionMain;
 
 import HyperionBC.*;
 import HyperionBlocker.Blockone;
-import HyperionReport.Report;
+//import HyperionReport.Report;
 import HyperionTP.RandomTP;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -16,7 +16,7 @@ public class MainClass extends JavaPlugin {
         registerEvents();
         registerBC();
         registerCommands();
-        registerReporter();
+        //registerReporter();
         registerRTP();
     }
 
@@ -39,10 +39,10 @@ public class MainClass extends JavaPlugin {
         getCommand("plugins").setExecutor(new Blockone());
 
     }
-    private void registerReporter() {
-        getCommand("report").setExecutor(new Report());
+    //private void registerReporter() {
+        //getCommand("report").setExecutor(new Report());
 
-    }
+   // }
     private void registerRTP(){
         getCommand("rtp").setExecutor(new RandomTP());
     }
