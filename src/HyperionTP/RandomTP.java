@@ -12,14 +12,14 @@ public class RandomTP implements CommandExecutor {
         if(commandLabel.equalsIgnoreCase("randomtp") || commandLabel.equalsIgnoreCase("rtp")) {
             Player player = (Player) sender;
 
-            int randomX = (int) (Math.random()*2000);
-            int randomZ = (int) (Math.random()*2000);
-            int randomY = player.getWorld().getHighestBlockYAt(randomX, randomZ);
+            double randomX = (Math.random() * 2000) + 0.5;
+            double randomZ = (Math.random() * 2000) + 0.5;
+            double randomY = player.getWorld().getHighestBlockYAt((int) randomX, (int) randomZ) + 1.5;
 
-            Location rtp = new Location(player.getWorld(),randomX, randomY, randomZ );
+            Location rtp = new Location(player.getWorld(), randomX, randomY, randomZ);
             player.teleport(rtp);
-            rtp.getBlock().setType(Material.DIRT);
-            player.sendMessage("You were teleported to X: " + randomX + " Y: " + randomY + " Z: " + randomZ);
+            rtp.getBlock().getRelative(0, -1, 0).setType(Material.DIRT);
+            player.sendMessage("You were teleported to X: " + (int) randomX + " Y: " + (int) randomY + " Z: " + (int) randomZ);
         }
         return false;
     }
