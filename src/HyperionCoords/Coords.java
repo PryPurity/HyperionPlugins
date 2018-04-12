@@ -12,8 +12,8 @@ public class Coords implements CommandExecutor {
             if ((!player.hasPermission("hyperion.coords")) && (player.isOp())) {
 
                 player.sendMessage("X: " + player.getLocation().getBlockX() + ", Y: " + player.getLocation().getBlockY() + ", Z: " + player.getLocation().getBlockZ());
+                return true;
             }
-            return false;
         }
         return false;
     }

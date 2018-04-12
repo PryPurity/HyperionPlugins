@@ -21,8 +21,8 @@ public class RandomTP implements CommandExecutor {
                 player.teleport(rtp);
                 rtp.getBlock().getRelative(0, -1, 0).setType(Material.DIRT);
                 player.sendMessage("You were teleported to X: " + (int) randomX + " Y: " + (int) randomY + " Z: " + (int) randomZ);
+                return true;
             }
-            return false;
         }
         return false;
     }
