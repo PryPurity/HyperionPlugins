@@ -3,6 +3,7 @@ package HyperionMain;
 import HyperionBC.*;
 import HyperionBlocker.Blockone;
 //import HyperionReport.Report;
+import HyperionCoords.Coords;
 import HyperionTP.RandomTP;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -18,6 +19,7 @@ public class MainClass extends JavaPlugin {
         registerCommands();
         //registerReporter();
         registerRTP();
+        registerCoords();
     }
 
     public void onDisable() {
@@ -45,5 +47,8 @@ public class MainClass extends JavaPlugin {
    // }
     private void registerRTP(){
         getCommand("rtp").setExecutor(new RandomTP());
+    }
+    private void registerCoords() {
+        getCommand("coords").setExecutor(new Coords());
     }
 }

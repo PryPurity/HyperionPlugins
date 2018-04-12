@@ -15,3 +15,7 @@ commands:
         usage:
         description:
         aliases: randomtp
+    coords:
+        usage:
+        description:
+        aliases: coordnates
