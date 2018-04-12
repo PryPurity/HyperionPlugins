@@ -11,7 +11,7 @@ public class RandomTP implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         if (commandLabel.equalsIgnoreCase("randomtp") || commandLabel.equalsIgnoreCase("rtp")) {
             Player player = (Player) sender;
-            if (player.hasPermission("hyperion.coords") || player.isOp()) {
+            if (player.hasPermission("hyperion.randomtp") || player.isOp()) {
 
                 double randomX = (Math.random() * 2000) + 0.5;
                 double randomZ = (Math.random() * 2000) + 0.5;
